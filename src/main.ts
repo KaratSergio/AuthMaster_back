@@ -11,8 +11,8 @@ async function start() {
   const config = new DocumentBuilder()
     .setTitle('AuthMaster')
     .setDescription('REST API Documentation auth service')
-    .setVersion('1.0.0')
-    .addTag('access control')
+    .setVersion('1.0.1')
+    .addTag('Access Management 👥')
     .build();
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('/api/docs', app, document);
