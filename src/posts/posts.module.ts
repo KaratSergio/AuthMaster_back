@@ -6,10 +6,11 @@ import { Post } from './post.model';
 
 import { PostsService } from './posts.service';
 import { PostsController } from './posts.controller';
+import { FilesModule } from '../files/files.module';
 
 @Module({
   providers: [PostsService],
   controllers: [PostsController],
-  imports: [SequelizeModule.forFeature([User, Post])],
+  imports: [SequelizeModule.forFeature([User, Post]), FilesModule],
 })
 export class PostsModule {}
