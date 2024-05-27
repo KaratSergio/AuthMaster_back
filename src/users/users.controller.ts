@@ -4,7 +4,6 @@ import { CreateUserDto } from './dto/create-user.dto';
 
 import { Controller, Body, Post, Get, UseGuards } from '@nestjs/common';
 import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger/dist';
-// import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 
 import { Roles } from '../auth/roles-auth.decorator';
 import { RolesGuard } from '../auth/roles.guard';
