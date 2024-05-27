@@ -1,13 +1,7 @@
 // import { ApiProperty } from '@nestjs/swagger';
-import { Column, DataType, Table, Model, BelongsTo, ForeignKey } from 'sequelize-typescript';
 import { User } from '../users/user.model';
-
-interface PostCreationAttrs {
-  title: string;
-  content: string;
-  userId: number;
-  image: string;
-}
+import { Column, DataType, Table, Model, BelongsTo, ForeignKey } from 'sequelize-typescript';
+import { PostCreationAttrs } from '../common/interfaces/interfaces';
 
 @Table({ tableName: 'posts' })
 export class Post extends Model<Post, PostCreationAttrs> {

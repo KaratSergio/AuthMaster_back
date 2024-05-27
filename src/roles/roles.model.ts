@@ -3,11 +3,7 @@ import { Column, DataType, Table, Model, BelongsToMany } from 'sequelize-typescr
 
 import { User } from '../users/user.model';
 import { UserRoles } from './user-roles-model';
-
-interface RoleCreationAttrs {
-  value: string;
-  description: string;
-}
+import { RoleCreationAttrs } from '../common/interfaces/interfaces';
 
 @Table({ tableName: 'roles' })
 export class Role extends Model<Role, RoleCreationAttrs> {
