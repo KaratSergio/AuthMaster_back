@@ -21,7 +21,6 @@ export class RolesController {
 
   @ApiOperation({ summary: 'Get role by type' })
   @ApiResponse({ status: 200, type: Role })
-  // @ApiResponse({ status: 404, description: 'Role not found' })
   @HttpCode(HttpStatus.OK)
   @Get('/:value')
   getByValue(@Param('value') value: string) {

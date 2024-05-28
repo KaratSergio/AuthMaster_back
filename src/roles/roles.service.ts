@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectModel } from '@nestjs/sequelize';
 
 import { Role } from './roles.model';
@@ -12,8 +12,12 @@ export class RolesService {
     const role = await this.roleRepository.create(dto);
     return role;
   }
+
   async getRoleByValue(value: string) {
     const role = await this.roleRepository.findOne({ where: { value } });
+    if (!role) {
+      throw new NotFoundException(`Role with value ${value} not found`);
+    }
     return role;
   }
 }
