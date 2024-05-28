@@ -1,73 +1,75 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+**Read in another language: [Ukrainian](README.ua.md).**
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+# Backend REST API "AuthMaster_Back"
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+This repository contains a backend API project for user registration and authorization using JWT, along with role management and access control.
 
-## Description
+## Table of contents
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+- [Project overview](#project-overview)
+- [Technologies used](#technologies-used)
+- [API Documentation](#api-documentation)
+- [Requirements](#requirements)
+- [Instalattion](#instalattion)
+- [Configuration](#configuration)
+- [Server Commands](#server-commands)
+
+## Project Overview
+
+- REST API
+- registration/authorization JWT
+- user roles and their verification
+- database PostgreSQL + Sequilize
+- working with the file system
+- documentation API
+- develop/production configuration
+- data validation
+- Docker/docker-compose
+
+## Technologies Used
+
+NestJS
+Sequelize
+JWT (JSON Web Token)
+bcryptjs
+Swagger
+TypeScript
+ESLint
+Prettier
+Jest
+RxJS
+class-transformer
+class-validator
+Multer
+
+## API Documentation
+
+For detailed descriptions of API requests and interactions, refer to the
+https://localhost:5000/api/docs
+
+<img src="./images/auth-master-swagger.png" alt="REST API Documentation" width="900" height="500">
+
+## Requirements
+
+Before getting started with the project, make sure you have the following tools installed on your computer:
+
+- Node.js (version 14 or higher)
 
 ## Installation
 
-```bash
-$ npm install
-```
+1. Clone this repository to your local computer.
+2. Open the terminal and navigate to the root folder of the project.
+3. Run the command `npm install` to install project dependencies.
 
-## Running the app
+## Configuration
 
-```bash
-# development
-$ npm run start
+1. Create a .env file in the project's root folder, based on the .env.example file.
+2. Specify the necessary environment variables in this file.
 
-# watch mode
-$ npm run start:dev
+## Server Commands
 
-# production mode
-$ npm run start:prod
-```
+**npm:**
 
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+- `npm start` — Start the server in production mode.
+- `npm run start:dev` — Start the server in development mode.
+- `npm run lint` — Run code linting using eslint. Perform this before each PR and fix all linting errors.
