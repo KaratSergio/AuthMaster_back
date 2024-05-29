@@ -10,7 +10,7 @@ This repository contains a backend API project for user registration and authori
 - [Technologies used](#technologies-used)
 - [API Documentation](#api-documentation)
 - [Requirements](#requirements)
-- [Instalattion](#instalattion)
+- [Installation](#instalattion)
 - [Configuration](#configuration)
 - [Server Commands](#server-commands)
 
